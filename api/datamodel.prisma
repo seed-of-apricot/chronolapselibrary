@@ -1,0 +1,116 @@
+type Game @db(name: "game") {
+  id: ID! @id
+  name: String!
+  leaders: [Leader!]! @relation (link: INLINE)
+  map: Map! @relation (link: INLINE)
+}
+
+type Leader @db(name: "leader") {
+  id: ID! @id
+  name: String!
+  player: Player! @relation (link: INLINE)
+  cities: [City!]! @relation (link: INLINE)
+  techs: [Tech!]! @relation (link: INLINE)
+  civics: [Civic!]! @relation (link: INLINE)
+  units: [Unit!]! @relation (link: INLINE)
+}
+
+type Player @db(name: "player") {
+  id: ID! @id
+  name: [StringTS!]!
+  isHuman: [BooleanTS!]!
+}
+
+type City @db(name: "city") {
+  id: ID! @id
+  name: [StringTS!]!
+  isExist: [BooleanTS!]!
+  population: [IntTS!]! @relation(name: "IntTS_population")
+  amenity: [IntTS!]! @relation(name: "IntTS_amenity")
+  entertainment: [IntTS!]! @relation(name: "IntTS_entertainment")
+  location: [TileTS!]! @relation(name: "IntTS_location")
+}
+
+type Unit @db(name: "unit") {
+  id: ID! @id
+  type: Int!
+  location: [TileTS!]!
+  cost: Int!
+  baseMoves: Int
+  combat: Int
+  range: Int
+  rangedCombar: Int
+  bombard: Int
+}
+
+type Tech @db(name: "tech") {
+  # Available in 0.1.0
+  id: ID! @id
+  type: Int!
+  progress: [FloatTS!]!
+  boosted: [BooleanTS!]!
+  cost: Int!
+  # Definition only
+  # eraType: String
+  # uiTreeRow: IntTS
+  # description: String
+  # critical: Boolean
+  # repeatable: Boolean
+  # embarkUnitType: String
+  # barbarianFree: true
+  # advisorType: String
+  # embarkAll: Boolean
+}
+
+type Civic @db(name: "civic") {
+  # Available in 0.1.0
+  id: ID! @id
+  type: Int!
+  progress: [FloatTS!]!
+  boosted: [BooleanTS!]!
+  cost: Int!
+  # Definition only
+  # eraType: String
+  # uiTreeRow: IntTS
+  # description: String
+  # advisorType: String
+}
+
+type Map @db(name: "map") {
+  id: ID! @id
+  type: String!
+  tiles: [Tile!]! @relation (link: INLINE)
+}
+
+type Tile @db(name: "tile") {
+  id: ID! @id
+  location: [Int!]!
+  terrain: [IntTS!]! @relation(name: "IntTS_terrain")
+  feature: [IntTS!]! @relation(name: "IntTS_feature")
+}
+
+type IntTS @embedded {
+  value: Int!
+  time: DateTime! @createdAt
+}
+
+type TileTS @embedded {
+  value: Tile! @relation (link: INLINE)
+  time: DateTime! @createdAt
+}
+
+type FloatTS @embedded {
+  value: Float!
+  time: DateTime! @createdAt
+}
+
+type BooleanTS @embedded {
+  value: Boolean!
+  time: DateTime! @createdAt
+}
+
+type StringTS @embedded {
+  value: String!
+  time: DateTime! @createdAt
+}
+
