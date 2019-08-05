@@ -3,16 +3,21 @@ import { hot } from 'react-hot-loader/root';
 import { Route, Switch } from 'react-router';
 import Layout from './components/Layout';
 import Home from './components/Home';
-import Login from './components/Login';
+import { WindowManager } from 'chronolapselibrary-commons';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const App: React.FC = (): JSX.Element => {
   return (
-    <Layout>
-      <Switch>
-        <Route exact path="/" component={Home} />
-      </Switch>
-    </Layout>
+    <WindowManager>
+      <BrowserRouter>
+        <Switch>
+          <Layout>
+            <Route exact path="/" component={Home} />
+          </Layout>
+        </Switch>
+      </BrowserRouter>
+    </WindowManager>
   );
 };
 

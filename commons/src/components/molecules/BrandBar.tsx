@@ -1,8 +1,8 @@
 import React from 'react';
 import { ButtonBase, createStyles, makeStyles, Fade } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import BrandLogo from 'components/atoms/BrandLogo';
-import BrandTypography from 'components/atoms/BrandTypography';
+import BrandLogo from '@src/components/atoms/BrandLogo';
+import BrandTypography from '@src/components/atoms/BrandTypography';
 
 interface BrandBarProps {
   size: number;

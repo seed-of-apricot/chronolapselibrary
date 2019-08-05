@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <div>
+  <div style={{height: "3000px"}}>
     <h1>Hello world!</h1>
   </div>
 );

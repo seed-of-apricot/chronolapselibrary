@@ -1,7 +1,6 @@
 import React from 'react';
 import { ButtonBase, createStyles, makeStyles } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-const logo = require('assets/images/logo/index.png');
+import logo from '@src/assets/images/logo/index.png';
 
 interface LogoProps {
   size: number;

@@ -7,7 +7,7 @@ import {
   makeStyles,
   Theme
 } from '@material-ui/core';
-import ListCL, { ListCLProps } from 'components/molecules/ListCL';
+import ListCL, { ListCLProps } from '@src/components/molecules/ListCL';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -1,7 +1,7 @@
 import React from 'react';
-import { useWindowManager } from 'components/utils/WindowManager';
-import BrandBar from 'components/molecules/BrandBar';
-import Signin from 'components/molecules/Signin';
+import { useWindowManager } from '@src/components/utils/WindowManager';
+import BrandBar from '@src/components/molecules/BrandBar';
+import Signin from '@src/components/molecules/Signin';
 
 const Header: React.FC = () => {
   const window = useWindowManager();

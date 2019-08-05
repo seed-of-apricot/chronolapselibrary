@@ -3,7 +3,7 @@ import ReactScrollbarsCustom, {
   ScrollbarContext,
   Scrollbar
 } from 'react-scrollbars-custom';
-import { ScrollState } from 'react-scrollbars-custom/dist/types/common';
+import { ScrollState } from 'react-scrollbars-custom/dist/types/types';
 
 interface IProps {
   children?: ReactNode;
@@ -53,10 +53,9 @@ export const useWindowManager = () => {
   const scroll = useContext(ScrollbarContext).parentScrollbar as Scrollbar;
   const [state, setState] = useState(scroll.getScrollState());
   const callback = (currentState: ScrollState) => setState(currentState);
-  scroll.eventEmitter.off('scroll', callback);
+  scroll.eventEmitter.on('scroll', callback);
   const memo = useMemo(() => {
     callback(scroll.getScrollState());
-    console.log(scroll.scrollTop);
     return scroll;
   }, [scroll]);
   return memo;

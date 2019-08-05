@@ -1,5 +1,6 @@
 import { List } from '@material-ui/core';
-import ListItemCL, { ListItemCLProps } from 'components/atoms/ListItemCL';
+import ListItemCL, { ListItemCLProps } from '@src/components/atoms/ListItemCL';
+import React from 'react';
 
 export interface ListCLProps {
   items: ListItemCLProps[];

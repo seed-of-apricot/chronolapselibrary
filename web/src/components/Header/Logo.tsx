@@ -1,8 +1,8 @@
-import React from 'react';
 import { ButtonBase, createStyles, makeStyles } from '@material-ui/core';
 import logo from 'assets/image/logo/1x/index.png';
 import Text from './Text';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 interface IProps {
   size: number;

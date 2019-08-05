@@ -1,5 +1,6 @@
 import { ListItem, ListItemText, Icon } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 export interface ListItemCLProps {
   icon?: String;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from './Navigation';
+import { Header } from 'chronolapselibrary-commons';
 import Container from '@material-ui/core/Container';
 import { Grid, Paper } from '@material-ui/core';
 import Home from './Home';
@@ -7,13 +7,9 @@ import Home from './Home';
 const Layout: React.FC = () => {
   return (
     <Container>
-      <Grid container>
-        <Grid item xs={2}>
-          <Navigation />
-        </Grid>
-        <Grid item xs={10}>
-          <Home />
-        </Grid>
+      <Header />
+      <Grid item xs={10}>
+        <Home />
       </Grid>
     </Container>
   );

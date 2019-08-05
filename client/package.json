@@ -17,9 +17,9 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-router": "^5.0.3",
     "@types/react-router-dom": "^4.3.4",
+    "chronolapselibrary-commons": "file:../commons",
     "electron": "^5.0.6",
     "electron-is-dev": "^1.1.0",
-    "jest": "^24.8.0",
     "keyboardjs": "^2.5.1",
     "lottie-react-web": "^2.1.4",
     "react": "^16.8.6",
@@ -93,7 +93,10 @@
       "sourceType": "module"
     },
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+      "@typescript-eslint/explicit-function-return-type": {
+        "allowTypedFunctionExpressions": true
+      }
     }
   }
 }
