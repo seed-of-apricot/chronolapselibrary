@@ -21,6 +21,6 @@ const useStyles = (props) => {
 const Logo = (props) => {
     const classes = useStyles(props);
     return (react_1.default.createElement(core_1.ButtonBase, { className: classes.buttonBase },
-        react_1.default.createElement("img", { src: index_png_1.default, style: { height: 2 * props.size } })));
+        react_1.default.createElement("img", { src: index_png_1.default, style: { height: props.size } })));
 };
 exports.default = Logo;

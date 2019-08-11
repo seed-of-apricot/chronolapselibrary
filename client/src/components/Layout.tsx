@@ -1,16 +1,15 @@
 import React from 'react';
-import { Header } from 'chronolapselibrary-commons';
+import { Header, Navigation } from 'chronolapselibrary-commons';
 import Container from '@material-ui/core/Container';
-import { Grid, Paper } from '@material-ui/core';
-import Home from './Home';
 
-const Layout: React.FC = () => {
+const Layout: React.FC = props => {
   return (
     <Container>
       <Header />
-      <Grid item xs={10}>
-        <Home />
-      </Grid>
+      <Navigation
+        list={{ items: [{ text: 'Multiplayer' }, { text: 'About' }] }}
+      />
+      {props.children}
     </Container>
   );
 };

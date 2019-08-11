@@ -11,11 +11,11 @@ const App: React.FC = (): JSX.Element => {
   return (
     <WindowManager>
       <BrowserRouter>
-        <Switch>
-          <Layout>
+        <Layout>
+          <Switch>
             <Route exact path="/" component={Home} />
-          </Layout>
-        </Switch>
+          </Switch>
+        </Layout>
       </BrowserRouter>
     </WindowManager>
   );

@@ -25,7 +25,7 @@ const Logo: React.FC<LogoProps> = (props: LogoProps) => {
   const classes = useStyles(props);
   return (
     <ButtonBase className={classes.buttonBase}>
-      <img src={logo} style={{ height: 2 * props.size }} />
+      <img src={logo} style={{ height: props.size }} />
     </ButtonBase>
   );
 };

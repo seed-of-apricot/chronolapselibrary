@@ -50,4 +50,4 @@ const options = {
   }
 };
 
-export const theme = createMuiTheme(options);
+export const defaultTheme = createMuiTheme(options);
