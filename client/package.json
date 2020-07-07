@@ -18,7 +18,7 @@
     "@types/react-router": "^5.0.3",
     "@types/react-router-dom": "^4.3.4",
     "chronolapselibrary-commons": "file:../commons",
-    "electron": "^5.0.6",
+    "electron": "^9.1.0",
     "electron-is-dev": "^1.1.0",
     "keyboardjs": "^2.5.1",
     "lottie-react-web": "^2.1.4",
